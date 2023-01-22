@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_config"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.program.navigationcourse.fragment.LoginFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/forget_fragment"
+        android:name="com.program.navigationcourse.fragment.ForgetFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/register_fragment"
+        android:name="com.program.navigationcourse.fragment.RegisterFragment">
+
+    </fragment>
+
+</navigation>
