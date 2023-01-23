@@ -7,6 +7,15 @@
     <fragment
         android:id="@+id/login_fragment"
         android:name="com.program.navigationcourse.fragment.LoginFragment">
+
+        <action android:id="@+id/to_register_fragment"
+            app:destination="@id/register_fragment"/>
+
+        <action android:id="@+id/to_forget_fragment"
+            app:destination="@id/forget_fragment"/>
+
+        <action android:id="@+id/to_agreement_activity"
+            app:destination="@id/agreement_activity"/>
     </fragment>
 
     <fragment
@@ -20,5 +29,8 @@
         android:name="com.program.navigationcourse.fragment.RegisterFragment">
 
     </fragment>
+
+    <activity android:name="com.program.navigationcourse.AgreementActivity"
+        android:id="@+id/agreement_activity"/>
 
 </navigation>
