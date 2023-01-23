@@ -9,4 +9,10 @@
         android:layout_height="wrap_content"
         android:text="注册界面"/>
 
+    <Button
+        android:text="进行头像认证"
+        android:id="@+id/toAvatarVerifyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>

@@ -35,6 +35,19 @@
     <fragment
         android:id="@+id/register_fragment"
         android:name="com.program.navigationcourse.fragment.RegisterFragment">
+        <action android:id="@+id/to_verify_fragment"
+            app:destination="@id/avatar_verify_fragment"/>
+    </fragment>
+
+    <fragment android:name="com.program.navigationcourse.fragment.AvatarVerifyFragment"
+        android:id="@+id/avatar_verify_fragment">
+
+<!--        app:popUpToInclusive="true" 是防止创建多个实例-->
+        <action android:id="@+id/to_login_page"
+            app:popUpTo="@id/login_fragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/login_fragment"
+            />
 
     </fragment>
 
