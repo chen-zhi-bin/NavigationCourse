@@ -5,8 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:overScrollMode="never"
+    android:background="#fff"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".AgreementActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:transitionName="userAvatarTn"
+        android:src="@mipmap/ic_launcher"/>
 
     <TextView
         android:layout_width="wrap_content"

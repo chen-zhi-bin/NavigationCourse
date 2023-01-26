@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/userAvatarIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"
+        android:transitionName="userAvatarTn" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="登录界面"/>
+        android:text="登录界面" />
 
     <Button
         android:id="@+id/toRegisterPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳转到注册界面"/>
+        android:text="跳转到注册界面" />
 
     <Button
         android:id="@+id/toForgetPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳转到找回密码"/>
+        android:text="跳转到找回密码" />
 
     <Button
         android:id="@+id/toAgreementPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳转到用户协议"/>
+        android:text="跳转到用户协议" />
 </LinearLayout>
