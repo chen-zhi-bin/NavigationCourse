@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_taobao_main"
+    app:startDestination="@id/taobao_index">
+
+
+    <fragment
+        android:id="@+id/taobao_index"
+        android:name="com.program.navigationcourse.taobao.TIndexFragment"
+        android:label="TIndexFragment" />
+    <fragment
+        android:id="@+id/taobao_onsell"
+        android:name="com.program.navigationcourse.taobao.TOnSellFragment"
+        android:label="TOnSellFragment" />
+    <fragment
+        android:id="@+id/taobao_redpocket"
+        android:name="com.program.navigationcourse.taobao.TRedpocketFragment"
+        android:label="TRedpocketFragment" />
+    <fragment
+        android:id="@+id/taobao_search"
+        android:name="com.program.navigationcourse.taobao.TSearchFragment"
+        android:label="TSearchFragment" />
+</navigation>
