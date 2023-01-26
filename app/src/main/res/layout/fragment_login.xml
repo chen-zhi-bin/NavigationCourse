@@ -5,6 +5,12 @@
     android:gravity="center"
     android:orientation="vertical">
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录界面" />
+
     <ImageView
         android:id="@+id/userAvatarIv"
         android:layout_width="100dp"
@@ -12,10 +18,13 @@
         android:src="@mipmap/ic_launcher"
         android:transitionName="userAvatarTn" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="登录界面" />
+        android:id="@+id/userNameInput"
+        android:transitionName="userNameTn"
+        android:hint="这是用户名"
+        />
 
     <Button
         android:id="@+id/toRegisterPage"

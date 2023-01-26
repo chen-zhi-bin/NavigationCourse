@@ -16,6 +16,13 @@
         android:transitionName="userAvatarTn"
         android:src="@mipmap/ic_launcher"/>
 
+    <EditText
+        android:id="@+id/agrUserNameInp"
+        android:hint="输入用户名"
+        android:layout_width="match_parent"
+        android:transitionName="userNameTn"
+        android:layout_height="wrap_content"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

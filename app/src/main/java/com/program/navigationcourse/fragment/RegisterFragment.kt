@@ -6,6 +6,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.transition.TransitionInflater
 import com.program.navigationcourse.R
 import com.program.navigationcourse.base.BaseFragment
+import kotlinx.android.synthetic.main.fragment_register.*
 import kotlinx.android.synthetic.main.fragment_register.view.*
 
 class RegisterFragment:BaseFragment() {
@@ -24,5 +25,8 @@ class RegisterFragment:BaseFragment() {
         rootView.toAvatarVerifyBtn.setOnClickListener {
             findNavController().navigate(R.id.avatar_verify_fragment)
         }
+        val userName:String? = arguments?.getString("userName")
+        println(userName)
+        rootView.regUserNameInput.setText(userName)
     }
 }

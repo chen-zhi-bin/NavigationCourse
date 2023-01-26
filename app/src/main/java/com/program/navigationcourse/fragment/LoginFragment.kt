@@ -1,10 +1,9 @@
 package com.program.navigationcourse.fragment
 
-import android.graphics.BitmapFactory
+import android.os.Bundle
 import android.view.View
 import androidx.core.app.ActivityOptionsCompat
 import androidx.navigation.ActivityNavigator
-import androidx.navigation.NavOptions
 import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
@@ -21,14 +20,21 @@ class LoginFragment:BaseFragment() {
     override fun initView(rootView: View) {
         super.initView(rootView)
         rootView.toRegisterPage.setOnClickListener {
+            //两个共享元素
+            //头像
             val imagePair = Pair<View,String>(userAvatarIv,"userAvatarTn")
+            //用户名
+            val userNamePair = Pair<View,String>(userNameInput,"userNameTn")
 //            val extras :FragmentNavigator.Extras=
 //                FragmentNavigatorExtras(userAvatarIv to "userAvatarTn")
             val extras :FragmentNavigator.Extras=
-                            FragmentNavigatorExtras(imagePair)
+                            FragmentNavigatorExtras(imagePair,userNamePair)
+            //数据
+            val bundle = Bundle()
+            bundle.putString("userName",userNameInput.text.toString())
                 //跳转到注册界面
             findNavController().navigate(R.id.to_register_fragment,
-            null,
+            bundle,
             null,
                 extras)
         }
@@ -37,17 +43,22 @@ class LoginFragment:BaseFragment() {
             findNavController().navigate(R.id.to_forget_fragment)
         }
         rootView.toAgreementPage.setOnClickListener {
-            val pair = androidx.core.util.Pair<View,String>(userAvatarIv,"userAvatarTn")
+            val ImagePair = androidx.core.util.Pair<View,String>(userAvatarIv,"userAvatarTn")
+
+            val userNamePair = androidx.core.util.Pair<View,String>(userNameInput,"userNameTn")
             var options = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 requireActivity(),
-                pair
+                ImagePair,userNamePair
             )
             val extras = ActivityNavigator.Extras.Builder()
                 .setActivityOptions(options)
                 .build()
+
+            val bundle = Bundle()
+            bundle.putString("userName",userNameInput.text.toString())
             //跳转到用户协议界面
             findNavController().navigate(R.id.to_agreement_activity,
-                null,
+                bundle,
                 null,
                 extras
             )
